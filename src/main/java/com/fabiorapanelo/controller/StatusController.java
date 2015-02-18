@@ -56,6 +56,10 @@ public class StatusController {
 
 		@SuppressWarnings("unchecked")
 		List<Status> statusList = q.getResultList();
+		Status creation = new Status();
+		creation.setId(1);
+		creation.setName("Created");
+		statusList.add(0, creation);
 		System.out.println(statusList.size());
 		em.close();
 		emf.close();

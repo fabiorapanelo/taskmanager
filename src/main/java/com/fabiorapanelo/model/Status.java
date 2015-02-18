@@ -10,12 +10,12 @@ import javax.validation.constraints.Size;
 @Entity
 public class Status {
 
-	/*
-	@GeneratedValue (strategy = GenerationType.SEQUENCE, generator = "seqStatus") 
-	@SequenceGenerator(name = "seqStatus", sequenceName = "SEQ_STATUS")
-	*/
 	@Id
 	private Integer id;
+	/*
+	@SequenceGenerator(name = "seqStatus", sequenceName = "SEQ_STATUS")
+	@GeneratedValue (strategy = GenerationType.SEQUENCE, generator = "seqStatus") 
+	*/
 	
 	@Size(min=2, max=30, message="The name should have 2 to 30 characters long.")
 	private String name;
